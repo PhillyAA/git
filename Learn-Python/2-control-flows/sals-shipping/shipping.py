@@ -1,4 +1,4 @@
-weight = 41.5
+weight = 50
 
 #Ground shipping
 if weight  <= 2:
@@ -23,6 +23,15 @@ elif weight > 6 and weight <= 10:
 else:
   cost_drone = weight * 14.25
 
-print("Drone shipping costs: " , cost_drone)
-print("Ground Shipping costs: ", cost_ground)
-print("Premium Ground Shipping costs: ", cost_ground_premium)
+print("Drone shipping costs: $" , cost_drone)
+print("Ground Shipping costs: $", cost_ground)
+print("Premium Ground Shipping costs: $", cost_ground_premium)
+
+lowest_cost = min(cost_drone, cost_ground, cost_ground_premium)
+
+if lowest_cost == cost_drone:
+   print("Drone shipping is the cheapest, the price is: $" , cost_drone)
+elif lowest_cost == cost_ground:
+   print("Ground shipping is the cheapest, the price is: $" , cost_ground)
+else:
+   print("Ground shipping premium is the cheapest, which is: $", cost_ground_premium)
