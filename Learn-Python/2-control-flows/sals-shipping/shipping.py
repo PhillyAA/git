@@ -27,6 +27,8 @@ print("Drone shipping costs: $" , cost_drone)
 print("Ground Shipping costs: $", cost_ground)
 print("Premium Ground Shipping costs: $", cost_ground_premium)
 
+#Lowest cost check
+
 lowest_cost = min(cost_drone, cost_ground, cost_ground_premium)
 
 if lowest_cost == cost_drone:
